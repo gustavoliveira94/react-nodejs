@@ -1,0 +1,194 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.App {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+
+    .menu-hidden {
+        background-color: #fffdfd;
+        width: 80%;
+        padding: 10px 0;
+        margin: -50px 10%;
+        margin-top: -50;
+        z-index: 1000;
+        position: absolute;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+        li a {
+            color: #000;
+        }
+    }
+
+    .menu {
+        margin: 0 10% 50px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: #fffdfd;
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+
+        ul {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+            li {
+                margin: 10px;
+                a {
+                    color: #000;
+                }
+            }
+            li:nth-of-type(3) {
+                display: none;
+            }
+        }
+    }
+
+    .App-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 10%;
+
+        .content-users {
+            width: 50%;
+            margin: 0 10%;
+        }
+
+        .content-user {
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            background-color: #fffdfd;
+            padding: 15px;
+            list-style: none;
+            margin-bottom: 20px;
+
+            div {
+                width: 100%;
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            div:nth-of-type(2) {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                a {
+                    color: #000;
+                    text-decoration: none;
+                }
+    
+                a:nth-of-type(2) {
+                    margin-left: 5px;
+                    border: 0;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background-color: #fffdfd;
+            padding: 15px;
+            width: 480px;
+            border-radius: 5px;
+
+            label {
+                font-weight: 600;
+            }
+
+            input {
+                padding: 0 5px;
+                height: 25px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                cursor: pointer;
+                border: 0;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .App .menu .logo {
+        width: 60%;
+    }
+    .App .menu .logo a{
+        font-size: 24px;
+    }
+    .App .menu ul {
+        width: 40%;
+    }
+    .App .menu ul li:nth-of-type(1){
+        display: none;
+    }
+    .App .menu ul li:nth-of-type(2){
+        display: none;
+    }
+    .App .menu ul li:nth-of-type(3){
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .App .menu ul li:nth-of-type(3) svg{
+        font-size: 24px;
+    }
+    .App .App-content form {
+        width: 100%;
+    }
+    .App .App-content .content-users{
+        width: 100%;
+    }
+    .App .App-content .content-user {
+        width: auto;
+    }
+}
