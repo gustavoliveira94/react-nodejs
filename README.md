@@ -1,4 +1,4 @@
-# Project = React And NodeJS
+# Project - React And NodeJS
 
 
 ## Installation
